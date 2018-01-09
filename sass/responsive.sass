@@ -1,0 +1,205 @@
+// Media Querie
+
+$tablet: 768px
+$mobile_l: 580px
+$mobile_m: 375px
+$mobile_s: 320px
+$device: max-device-width
+
+.header
+    @media screen and ($device: $tablet)
+        background: #333
+    @media screen and ($device: $mobile_l)
+        background: #555
+
+    .content-top
+        @media screen and($device: $tablet)
+            padding: 10px 5px
+
+            .brand
+                width: 10%
+
+            .navigation
+                .item
+                    font-weight: 700        
+                    font-size: 14px
+
+        @media screen and($device: $mobile_l)
+            background: #222
+            flex-direction: column
+
+            .navigation
+                width: 100%
+                display: flex
+                flex-direction: row
+                justify-content: space-around
+                .item
+                    width: 30%
+                    color: #fff
+
+            .brand
+                width: 100%
+                padding: 0 20px 
+                display: flex
+                justify-content: space-between
+                align-items: center
+                margin-left: 0
+
+                img
+                    width: 15%
+
+                .btn-menu
+                    display: inline-block    
+
+
+    .content-bottom
+        @media screen and($device: $tablet)
+
+            .description 
+                .title
+                    font-size: 4em
+                    color: #fff
+                .subtitle
+                    background: none
+                    color: #f0f0f0
+                    font-size: 1em     
+
+            .buttons
+                width: 70%
+
+                .btn-item
+                    width: 30%
+
+        @media screen and($device: $mobile_l)
+
+            .description
+
+                .title
+                    border-bottom: 2px solid #fff
+
+                .subtitle
+                    font-size: .9em    
+
+            .buttons
+                background: #222
+                width: 100%
+                padding: 20px
+
+                .btn-item
+                    margin: 0
+                    background: #ddd
+                    border-radius: 3px
+                    color: #111     
+
+                    &:hover
+                        background: #fff
+                        transform: scale(1)
+
+.main
+    @media screen and($device: $tablet)
+        border: none
+
+        .about
+            .description
+                width: 100%
+                margin-bottom: 30px
+
+            .btn-gallery
+                width: 30%
+
+                .button
+                    padding: 15px 10px
+                    font-size: 22px
+
+                    &:hover
+                        color: #ffb300
+                        background: #fff    
+
+        .characteristics
+            margin-bottom: 150px
+
+            .content
+                width: 20%
+
+        .messages
+            display: none
+
+        .prices
+            .view
+                width: 100%
+                box-shadow: 0px 2px 10px #aaa
+
+                .title
+                    border-bottom: none
+                    margin-bottom: none
+
+                img
+                    border-radius: 5px
+                    padding: 0   
+                    margin: 10px 0   
+
+                .btn-price
+                    width: 50%
+                    border: none
+                    background: rgba(#222, .8)
+                    outline: none
+                    box-shadow: 0px 2px 10px #aaa
+
+                    &:hover
+                        background: rgba(#222, .3)
+                        border: none
+                        color: #222
+                            
+
+        .contact
+            .data
+                width: 100%
+                text-align: center
+                margin-bottom: 20px
+
+            .networks
+                width: 100%
+                text-align: center
+
+                .item
+                    margin: 0 15px                
+
+
+    @media screen and($device: $mobile_l)
+
+        .about
+            .description
+                .text
+                    font-size: 15px
+
+            .btn-gallery 
+                width: 100%    
+
+                .button
+                    transform: scale(.8)         
+
+
+        .characteristics
+            margin-bottom: 150px
+
+            .content
+                width: 40%
+                margin-bottom: 30px
+
+        .prices
+            .view
+                .btn-price
+                    background: none
+                    border: none
+                    box-shadow: none
+                    color: #222
+
+                    &:hover
+                        background: none
+                        border: none
+                        color: #ffb300
+
+        .contact
+            width: 100%                        
+
+
